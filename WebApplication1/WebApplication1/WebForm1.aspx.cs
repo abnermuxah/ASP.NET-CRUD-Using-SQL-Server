@@ -22,7 +22,7 @@ namespace WebApplication1
         protected void BindGridview()
         {
             DataSet ds = new DataSet();
-            using (SqlConnection con = new SqlConnection("Data Source=ZYTEN-PC\\SQLEXPRESS;Integrated Security=true;Initial Catalog=book_details"))
+            using (SqlConnection con = new SqlConnection("Data Source=LAPTOP-H1LSPBSL\\SQLEXPRESS ;Integrated Security=true;Initial Catalog=master"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("crudoperations", con);
@@ -97,7 +97,7 @@ namespace WebApplication1
 
         protected void crudoperations(string status, string book_name, string book_author, string book_ISBN, int book_id)
         {
-            using (SqlConnection con = new SqlConnection("Data Source=ZYTEN-PC\\SQLEXPRESS;Integrated Security=true;Initial Catalog=book_details"))
+            using (SqlConnection con = new SqlConnection("Data Source=LAPTOP-H1LSPBSL\\SQLEXPRESS ;Integrated Security=true;Initial Catalog=master"))
             {
                 con.Open();
                 SqlCommand cmd = new SqlCommand("crudoperations", con);
